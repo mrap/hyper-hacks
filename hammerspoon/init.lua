@@ -2,35 +2,31 @@
 -- A global variable for the Hyper Mode
 k = hs.hotkey.modal.new({}, "F17")
 
--- HYPER+L: Open news.google.com in the default browser
-lfun = function()
-  news = "app = Application.currentApplication(); app.includeStandardAdditions = true; app.doShellScript('open http://news.google.com')"
-  hs.osascript.javascript(news)
+-- Launch or Focus an App
+launch = function(appname)
+  hs.application.launchOrFocus(appname)
   k.triggered = true
 end
-k:bind('', 'l', nil, lfun)
 
--- HYPER+M: Call a pre-defined trigger in Alfred 3
-mfun = function()
-  cmd = "tell application \"Alfred 3\" to run trigger \"emoj\" in workflow \"com.sindresorhus.emoj\" with argument \"\""
-  hs.osascript.applescript(cmd)
-  k.triggered = true
+-- Single keybinding for app launch
+singleapps = {
+  {'b', 'Google Chrome Canary'},
+  {'c', 'Slack'},
+  {'d', 'Dash'},
+  {'e', 'Airmail 2'},
+  {'h', 'Plug'},
+  {'m', 'Messages'},
+  {'p', 'Pandora'},
+  {'r', 'Vitamin-R 2'},
+  {'t', 'Tidal'},
+  {'w', 'Wunderlist'},
+  {'x', 'Xcode'},
+  {'return', 'Google Chrome'},
+  {'space', '/Applications/iTerm.app'}
+}
+for i, app in ipairs(singleapps) do
+  k:bind({}, app[1], function() launch(app[2]); end)
 end
-k:bind({}, 'm', nil, mfun)
-
--- HYPER+E: Act like ⌃e and move to end of line.
-efun = function()
-  hs.eventtap.keyStroke({'⌃'}, 'e')
-  k.triggered = true
-end
-k:bind({}, 'e', nil, efun)
-
--- HYPER+A: Act like ⌃a and move to beginning of line.
-afun = function()
-  hs.eventtap.keyStroke({'⌃'}, 'a')
-  k.triggered = true
-end
-k:bind({}, 'a', nil, afun)
 
 -- Enter Hyper Mode when F18 (Hyper/Capslock) is pressed
 pressedF18 = function()
@@ -49,3 +45,6 @@ end
 
 -- Bind the Hyper key
 f18 = hs.hotkey.bind({}, 'F18', pressedF18, releasedF18)
+
+-- ^w deletes a word
+hs.hotkey.bind({'ctrl'}, 'w', nil, function() hs.eventtap.keyStroke({'alt'}, 'delete'); end)
