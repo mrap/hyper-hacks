@@ -17,7 +17,7 @@ singleapps = {
   {'m', 'Messages'},
   {'p', 'Plug'},
   {'r', 'Vitamin-R 2'},
-  {'t', 'Tidal'},
+  {'t', 'Spotify'},
   {'w', 'Wunderlist'},
   {'x', 'Xcode'},
   {'return', 'Google Chrome'},
