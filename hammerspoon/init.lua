@@ -10,6 +10,7 @@ end
 
 -- Single keybinding for app launch
 singleapps = {
+  {'1', '1Password'},
   {'b', 'Google Chrome Canary'},
   {'c', 'Slack'},
   {'d', 'Dash'},
