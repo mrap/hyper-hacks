@@ -2,10 +2,14 @@
 -- A global variable for the Hyper Mode
 k = hs.hotkey.modal.new({}, "F17")
 
+triggerHyperAction = function()
+  k.triggered = true
+end
+
 -- Launch or Focus an App
 launch = function(appname)
   hs.application.launchOrFocus(appname)
-  k.triggered = true
+  triggerHyperAction()
 end
 
 -- Single keybinding for app launch
@@ -29,6 +33,9 @@ singleapps = {
 for i, app in ipairs(singleapps) do
   k:bind({}, app[1], function() launch(app[2]); end)
 end
+
+-- Hyper+/ app help menu
+k:bind({}, '/', nil, function() triggerHyperAction() hs.eventtap.keyStroke({'cmd', 'shift'}, '/'); end)
 
 -- Enter Hyper Mode when F18 (Hyper/Capslock) is pressed
 pressedF18 = function()
