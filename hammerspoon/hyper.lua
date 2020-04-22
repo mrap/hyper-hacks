@@ -11,11 +11,11 @@ launch = function(appname)
   triggerHyperAction()
 end
 
-ableton = 'Ableton Live 10.1 Beta'
+ableton = 'Ableton Live 10.1.3 Suite'
 flstudio = 'FL Studio 20'
 bitwig = 'Bitwig Studio'
-daw1 = flstudio
-daw2 = ableton
+daw1 = ableton
+daw2 = flstudio
 daw3 = bitwig
 
 -- Single keybinding for app launch
