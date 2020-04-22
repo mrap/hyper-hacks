@@ -43,7 +43,7 @@ singleapps = {
   {'t', 'Samplism'},
   {'u', 'Music'},
   {'v', 'VLC'},
-  {'w', 'Wunderlist'},
+  {'w', 'Microsoft To Do'},
   {'x', 'Xcode'},
   {'return', 'Google Chrome'},
   {'space', daw1}
