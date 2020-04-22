@@ -41,7 +41,7 @@ singleapps = {
   {'r', 'Vitamin-R 3'},
   {'s', 'Splice'},
   {'t', 'Samplism'},
-  {'u', 'iTunes'},
+  {'u', 'Music'},
   {'v', 'VLC'},
   {'w', 'Wunderlist'},
   {'x', 'Xcode'},
