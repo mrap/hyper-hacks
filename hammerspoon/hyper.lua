@@ -18,9 +18,10 @@ daw1 = ableton
 daw2 = flstudio
 daw3 = bitwig
 
+mainApp = 'iTerm'
+
 -- Single keybinding for app launch
 singleapps = {
-  {',', 'iTerm'},
   {'-', '/Applications/Utilities/Console.app'},
   {'=', 'Activity Monitor'},
   {'\\', daw2},
@@ -46,7 +47,7 @@ singleapps = {
   {'w', 'Microsoft To Do'},
   {'x', 'Xcode'},
   {'return', 'Google Chrome'},
-  {'space', daw1}
+  {'space', mainApp}
 }
 for i, app in ipairs(singleapps) do
   k:bind({}, app[1], function() launch(app[2]); end)
