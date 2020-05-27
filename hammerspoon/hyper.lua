@@ -33,7 +33,7 @@ singleapps = {
   {'d', 'Dash'},
   {'e', 'Spark'},
   {'f', 'Finder'},
-  -- {'h', 'Plug'},
+  {'h', 'Postman'},
   -- {'k', 'Kindle'},
   {'l', 'Logic Pro X'},
   {'m', 'Messages'},
