@@ -27,6 +27,7 @@ singleapps = {
   {'\\', daw2},
   {']', daw3},
   {'1', '1Password'},
+  {'2', 'Kindle'},
   {'a', ableton},
   {'b', 'Google Chrome Canary'},
   {'c', '/Applications/Universal Audio/Console.app'},
@@ -34,7 +35,7 @@ singleapps = {
   {'e', 'Spark'},
   {'f', 'Finder'},
   {'h', 'Postman'},
-  -- {'k', 'Kindle'},
+  -- pressing k in vim toggles HYPER-k too often  
   {'l', 'Logic Pro X'},
   {'m', 'Messages'},
   {'p', 'Preview'},
