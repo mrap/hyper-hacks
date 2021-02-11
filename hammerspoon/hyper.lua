@@ -38,6 +38,7 @@ singleapps = {
   -- pressing k in vim toggles HYPER-k too often  
   {'l', 'Logic Pro X'},
   {'m', 'Messages'},
+  {'n', 'Roam Research'},
   {'p', 'Preview'},
   {'q', 'Spotify'},
   {'r', 'Vitamin-R 3'},
